@@ -530,7 +530,6 @@ def fetch_live_flight_from_api(airline_name: str, flight_num_digits: str, df_fil
 
     return df_match
 
-
 # Dashboard overview page
 def page_overview(df_filtered, df_raw, df_arrivals, df_weather):
     st.subheader("Overview")
@@ -565,11 +564,6 @@ def page_overview(df_filtered, df_raw, df_arrivals, df_weather):
               for a specific flight number and even simulate different weather scenarios.
             """
         )
-        
-        # Display plane image
-        plane_image_path = BASE_DIR / "assets" / "plane.png"
-        if plane_image_path.exists():
-            st.image(str(plane_image_path), use_column_width=True)
         
         # Footer
         st.markdown("---")
