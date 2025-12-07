@@ -392,11 +392,11 @@ def load_and_clean_arrivals(filepath):
 
     # Handle Codeshares
     # The unique physical event is a landing at a specific gate at a specific time
-    df.sort_values(by=['arr_scheduled_time', 'arr_gate', 'airline_iata'],
+    df.sort_values(by=['arr_scheduled_time', 'airline_iata'],
                    inplace=True)
 
     # Deduplicate
-    subset_cols = ['arr_scheduled_time', 'arr_gate', 'dep_iata']
+    subset_cols = ['arr_scheduled_time', 'dep_iata']
     df_unique = df.drop_duplicates(subset=subset_cols, keep='first')
 
     print(f"Arrivals loaded: {original_count}")
