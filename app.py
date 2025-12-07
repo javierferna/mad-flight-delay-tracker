@@ -1231,6 +1231,7 @@ def page_predict(df_filtered: pd.DataFrame):
     )
 
     st.markdown("###  Option 1: Specific flight")
+    st.caption("Only airlines with historical data are shown. The model's accuracy depends on having past records for comparison.")
 
     col1, col2, col3 = st.columns([2, 1, 1])
 
@@ -1739,6 +1740,7 @@ def page_predict(df_filtered: pd.DataFrame):
         "Use this when you want a general idea of delay risk for a route, even if we don't "
         "have your exact flight number."
     )
+    st.caption("Destinations shown are based on routes this airline has operated in our historical data.")
 
     colr1, colr2 = st.columns(2)
 
