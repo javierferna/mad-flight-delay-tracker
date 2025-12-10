@@ -10,7 +10,7 @@ import requests
 import os
 from airport_data import IATA_LABELS, IATA_COORDS, MAD_COORDS
 
-# Make sure we load .env from the same folder as config.py or from the project root just above it
+# Make sure we load .env from the same folder as config.py or from the project root just above it (our keys are in there)
 HERE = Path(__file__).resolve().parent
 env_path = HERE / ".env"
 if not env_path.exists():
